@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-label style="font-weight: 800;font-size: 3em;">
+        today
+        <p style="font-weight: 400;color: #230d57 ;">{{today | date:'fullDate'}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+
+  <ion-card *ngFor="let item of formationlist; let i = index" class="ion-margin"  (click)="showDetails(item.docid)" [button]="true">
+    <ion-card-header>
+      
+      <ion-card-subtitle [style.color]="item.itemPriority === 'high' ? 'red' : (item.itemPriority === 'low' ? 'green' : 'orange')">
+        {{item.itemCategory}}
+      </ion-card-subtitle>
+
+      <ion-item>
+        <ion-icon *ngIf="item.itemPriority === 'high'" color="danger" size="small" name="ellipse"></ion-icon>
+        <ion-icon *ngIf="item.itemPriority === 'low'" color="success" size="small" name="ellipse"></ion-icon>
+        <ion-icon *ngIf="item.itemPriority === 'middle'" color="warning" size="small" name="ellipse"></ion-icon>
+        <ion-label> {{ item.itemName}}</ion-label>
+      </ion-item>
+
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label>Due {{item.itemDueDate }}</ion-label>
+    </ion-card-content>
+
+    <ion-row>
+    
+
+      <ion-item button (click)="update(item)">
+        <ion-icon name="create-outline"></ion-icon>
+        <p>Update</p>
+      </ion-item>
+
+      <ion-item button (click)="delete(item.key)">
+        <ion-icon name="trash-outline"></ion-icon>
+        <p>Cancel</p>
+      </ion-item>
+    </ion-row>
+
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNewItem()">
+      <ion-icon name="basket" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

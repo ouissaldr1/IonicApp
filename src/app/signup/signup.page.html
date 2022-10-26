@@ -1,0 +1,23 @@
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+
+<ion-content class="ion-pading">
+  <ion-img  src="../../assets/images/header1.png"></ion-img>
+  <h1>Bienvenue</h1>
+  <div class="form">
+    <ion-item lines="none">
+      <ion-label class="label" position="stacked">Name</ion-label>
+      <div class="input"><ion-input  placeholder="Saisissez.." class="input-field" [(ngModel)]='name'><i class='bx bx-user'></i></ion-input></div>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label class="label" position="stacked">Email</ion-label>
+      <div class="input"><ion-input placeholder="Saisissez.." class="input-field"[(ngModel)]='email'><i class='bx bx-envelope'></i></ion-input></div>
+    </ion-item>
+    <br>
+    <ion-item lines="none">
+      <ion-label  class="label" position="stacked">Password</ion-label>
+      <div style="margin-bottom: 20px;" class="input"><ion-input  placeholder="Saisissez.." class="input-field" [(ngModel)]='password'><i class='bx bx-lock-alt'></i></ion-input></div>
+    </ion-item>
+    <ion-button class="btn" shape="round" (click)='signup()' expand='block'>Signup</ion-button>
+  </div>
+</ion-content>

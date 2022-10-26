@@ -1,0 +1,59 @@
+ion-content{
+    --ion-background-color: #E1EAF9;
+    
+}
+
+.form{
+    margin-top: 20px;
+}
+
+.label{
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.input-field {
+    max-width: 380px;
+    width: 360px;
+    background-color: #d4ddec;
+    margin: 10px 0;
+    height: 50px;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 2px;
+    position: relative;
+
+   
+  }
+
+  .btn{
+      position: relative;
+      margin: 0 auto;
+      max-width: 200px;
+      height: 40px;
+    
+  }
+
+  ion-button:hover{
+      color: blue;
+      font-size: 15px;
+  }
+
+  .h5{
+      position: relative;
+      width: 80%;
+      margin: 0 auto;
+      
+  }
+
+  .bx{
+      margin-left: 15px;
+      font-size: 25px;
+      color: gray;
+
+  }
+  
+  
+ 
